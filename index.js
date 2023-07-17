@@ -151,14 +151,14 @@ async function main(){
         changeMap: addEarthQuakes, 
     })
 
-    L.easyButton('<img src="https://aleksei115.github.io/TremorWorld-App/img/location-crosshairs-solid.svg">', function(btn, map){
+    L.easyButton('<img src="./location-crosshairs-solid.svg">', function(btn, map){
         map.setView([19.3, -99.1],11);
     },'Home').addTo(map);
 
     var stateChangingButton = L.easyButton({
         states: [{
                 stateName: 'activate-plugin',        // name the state
-                icon:      '<img src="https://aleksei115.github.io/TremorWorld-App/img/house-crack-solid.svg">',               
+                icon:      '<img src="./house-crack-solid.svg">',               
                 title:     'Show Earthquakes',      // like its title
                 onClick: function(btn, map) {       // and its callback
                     map.addControl(pluginTimeLineControl)
@@ -166,7 +166,7 @@ async function main(){
                 }
             }, {
                 stateName: 'deactivate-plugin',
-                icon:      '<img src="https://aleksei115.github.io/TremorWorld-App/img/house-solid.svg">',
+                icon:      '<img src="./house-solid.svg">',
                 title:     'Hide Earthquakes',
                 onClick: function(btn, map) {
                     map.removeControl(pluginTimeLineControl);
